@@ -27,7 +27,7 @@ class Device:
         self.redeemed_bandwidth = json_device_info.get(
             "redeem_bw", "Error retrieving redeemed bandwidth")
         self.rate = json_device_info.get("rate", "Error retrieving rate")
-        self.country = json_device_info.get("cn", "UnKnown")
+        self.country = json_device_info.get("cn", "Unkown")
         self.device_type = re.findall('sdk-([a-zA-Z0-9]*)-', self.uuid)[0]
         self.banned = BanDetails(json_device_info.get('banned', False))
 
